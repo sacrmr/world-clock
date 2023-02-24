@@ -57,7 +57,7 @@ h2 {
 }
 
 .time {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: bold;
 }
 
@@ -76,4 +76,26 @@ footer {
   text-align: center;
   font-size: 18px;
   color: white;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 45px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .date {
+    font-size: 14px;
+  }
+
+  .time {
+    font-size: 20px;
+  }
 }
