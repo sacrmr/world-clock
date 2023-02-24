@@ -1,4 +1,15 @@
 function updateTime() {
+  let londonElement = document.querySelector("#london");
+  if (londonElement) {
+    let londonDateElement = londonElement.querySelector(".date");
+    let londonTimeElement = londonElement.querySelector(".time");
+    let londonTime = moment().tz("Europe/London");
+    londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
+    londonTimeElement.innerHTML = `${londonTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    )}`;
+  }
+
   let parisElement = document.querySelector("#paris");
 
   if (parisElement) {
@@ -8,17 +19,6 @@ function updateTime() {
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     parisTimeElement.innerHTML = `${parisTime.format(
       "h:mm.ss [<small>]A[</small>]"
-    )}`;
-  }
-
-  let londonElement = document.querySelector("#london");
-  if (londonElement) {
-    let londonDateElement = londonElement.querySelector(".date");
-    let londonTimeElement = londonElement.querySelector(".time");
-    let londonTime = moment().tz("Europe/London");
-    londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
-    londonTimeElement.innerHTML = `${londonTime.format(
-      "h:mm:ss [<small>]A[</small>]"
     )}`;
   }
 }
